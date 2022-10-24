@@ -28,7 +28,7 @@ push:
     - name: "main"
       update_registries: []
       enable_notifications: true
-      # lifemonitor_instance: development
+      lifemonitor_instance: test
     # - name: "develop"
     #   update_registries: []
     #   enable_notifications: true
