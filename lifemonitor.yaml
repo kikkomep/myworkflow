@@ -1,5 +1,5 @@
 # worfklow name (override name defined on the RO-Crate metadata)
-# name: MyWorkflow
+name: MyWorkflow
 # worfklow visibility
 public: False
 
