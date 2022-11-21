@@ -29,10 +29,10 @@ push:
       update_registries: []
       enable_notifications: true
       # lifemonitor_instance: development
-    - name: "develop"
-      update_registries: [wfhubdev]
-      enable_notifications: true
-      lifemonitor_instance: development
+#    - name: "develop"
+#      update_registries: [wfhubdev]
+#      enable_notifications: true
+#      lifemonitor_instance: development
 
   tags:
     # Define the list of tags to watch
@@ -43,10 +43,10 @@ push:
     #   lifemonitor_instance: development   # uncomment to use the 'development' instance of LifeMonitor
     #                                       # (the 'production' instance is used by default)
     - name: "v*.*.*"
-      update_registries: [wfhub]
+      update_registries: [wfhubdev]
       enable_notifications: true
-      # lifemonitor_instance: development
+      lifemonitor_instance: development
     - name: "*.*.*"
-      update_registries: [wfhub]
+      update_registries: [wfhubdev]
       enable_notifications: true
-      # lifemonitor_instance: development
+      lifemonitor_instance: development
