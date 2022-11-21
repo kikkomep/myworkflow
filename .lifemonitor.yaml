@@ -29,10 +29,10 @@ push:
       update_registries: []
       enable_notifications: true
       # lifemonitor_instance: development
-    # - name: "develop"
-    #   update_registries: []
-    #   enable_notifications: true
-    #   lifemonitor_instance: development
+    - name: "develop"
+      update_registries: [wfhubdev]
+      enable_notifications: true
+      lifemonitor_instance: development
 
   tags:
     # Define the list of tags to watch
