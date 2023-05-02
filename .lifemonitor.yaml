@@ -2,7 +2,7 @@
 workflow_name: MyWorkflow
 
 # worfklow visibility
-public: 
+public: false
 
 # Issue Checker Settings
 issues:
