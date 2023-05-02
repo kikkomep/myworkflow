@@ -26,7 +26,7 @@ push:
     #                                       # (e.g., https://api.lifemontor.eu/registries)
     #   lifemonitor_instance: development   # uncomment to use the 'development' instance of LifeMonitor
     #                                       # (the 'production' instance is used by default)
-    - name: ""
+    - name: "main"
       update_registries: []
       enable_notifications: true
       # lifemonitor_instance: development
