@@ -1,4 +1,4 @@
-name: MyWorkflow Tests
+name: Workflow Description Tests
 
 on:
   push:
@@ -25,4 +25,4 @@ jobs:
         pip install planemo
     - name: run planemo test
       run: |
-        planemo test --biocontainers my-workflow.ga
+        planemo test --biocontainers workflow-description.ga
