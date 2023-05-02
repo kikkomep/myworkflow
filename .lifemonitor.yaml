@@ -44,7 +44,7 @@ push:
     #   lifemonitor_instance: development   # uncomment to use the 'development' instance of LifeMonitor
     #                                       # (the 'production' instance is used by default)
     - name: "v*.*.*"
-      update_registries: []
+      update_registries: ['wfhub']
       enable_notifications: true
       # lifemonitor_instance: development
     - name: "*.*.*"
