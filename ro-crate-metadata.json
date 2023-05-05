@@ -1,0 +1,155 @@
+{
+    "@context": [
+        "https://w3id.org/ro/crate/1.1/context",
+        {
+            "GithubService": "https://w3id.org/ro/terms/test#GithubService",
+            "JenkinsService": "https://w3id.org/ro/terms/test#JenkinsService",
+            "PlanemoEngine": "https://w3id.org/ro/terms/test#PlanemoEngine",
+            "TestDefinition": "https://w3id.org/ro/terms/test#TestDefinition",
+            "TestInstance": "https://w3id.org/ro/terms/test#TestInstance",
+            "TestService": "https://w3id.org/ro/terms/test#TestService",
+            "TestSuite": "https://w3id.org/ro/terms/test#TestSuite",
+            "TravisService": "https://w3id.org/ro/terms/test#TravisService",
+            "definition": "https://w3id.org/ro/terms/test#definition",
+            "engineVersion": "https://w3id.org/ro/terms/test#engineVersion",
+            "instance": "https://w3id.org/ro/terms/test#instance",
+            "resource": "https://w3id.org/ro/terms/test#resource",
+            "runsOn": "https://w3id.org/ro/terms/test#runsOn"
+        }
+    ],
+    "@graph": [
+        {
+            "@id": "./",
+            "@type": "Dataset",
+            "datePublished": "2023-05-05T09:56:38+00:00",
+            "hasPart": [
+                {
+                    "@id": "my-workflow.ga"
+                },
+                {
+                    "@id": "my-workflow-test.yml"
+                },
+                {
+                    "@id": "test-data/"
+                },
+                {
+                    "@id": "README.md"
+                }
+            ],
+            "isBasedOn": "https://github.com/kikkomep/myworkflow",
+            "mainEntity": {
+                "@id": "my-workflow.ga"
+            },
+            "mentions": [
+                {
+                    "@id": "#8eaaeefa-82a9-487f-be2a-82eb9d7fd629"
+                }
+            ],
+            "name": "myworkflow"
+        },
+        {
+            "@id": "ro-crate-metadata.json",
+            "@type": "CreativeWork",
+            "about": {
+                "@id": "./"
+            },
+            "conformsTo": [
+                {
+                    "@id": "https://w3id.org/ro/crate/1.1"
+                },
+                {
+                    "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
+                }
+            ]
+        },
+        {
+            "@id": "my-workflow.ga",
+            "@type": [
+                "File",
+                "SoftwareSourceCode",
+                "ComputationalWorkflow"
+            ],
+            "name": "myworkflow",
+            "programmingLanguage": {
+                "@id": "https://w3id.org/workflowhub/workflow-ro-crate#galaxy"
+            },
+            "url": "https://github.com/kikkomep/myworkflow",
+            "version": "main"
+        },
+        {
+            "@id": "https://w3id.org/workflowhub/workflow-ro-crate#galaxy",
+            "@type": "ComputerLanguage",
+            "identifier": {
+                "@id": "https://galaxyproject.org/"
+            },
+            "name": "Galaxy",
+            "url": {
+                "@id": "https://galaxyproject.org/"
+            },
+            "version": "21.09"
+        },
+        {
+            "@id": "#8eaaeefa-82a9-487f-be2a-82eb9d7fd629",
+            "@type": "TestSuite",
+            "definition": {
+                "@id": "my-workflow-test.yml"
+            },
+            "instance": [
+                {
+                    "@id": "#91977a59-5462-4895-9442-c1ef4cff3a2e"
+                }
+            ],
+            "mainEntity": {
+                "@id": "my-workflow.ga"
+            },
+            "name": "Test suite for myworkflow"
+        },
+        {
+            "@id": "#91977a59-5462-4895-9442-c1ef4cff3a2e",
+            "@type": "TestInstance",
+            "name": "GitHub Actions workflow for testing myworkflow",
+            "resource": "repos/kikkomep/myworkflow/actions/workflows/wftest.yml",
+            "runsOn": {
+                "@id": "https://w3id.org/ro/terms/test#GithubService"
+            },
+            "url": "https://api.github.com"
+        },
+        {
+            "@id": "https://w3id.org/ro/terms/test#GithubService",
+            "@type": "TestService",
+            "name": "Github Actions",
+            "url": {
+                "@id": "https://github.com"
+            }
+        },
+        {
+            "@id": "my-workflow-test.yml",
+            "@type": [
+                "File",
+                "TestDefinition"
+            ],
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/terms/test#PlanemoEngine"
+            },
+            "engineVersion": "0.74"
+        },
+        {
+            "@id": "https://w3id.org/ro/terms/test#PlanemoEngine",
+            "@type": "SoftwareApplication",
+            "name": "Planemo",
+            "url": {
+                "@id": "https://github.com/galaxyproject/planemo"
+            }
+        },
+        {
+            "@id": "test-data/",
+            "@type": "Dataset",
+            "description": "Data files for testing the workflow"
+        },
+        {
+            "@id": "README.md",
+            "@type": "File",
+            "description": "Workflow documentation"
+        }
+    ]
+}
