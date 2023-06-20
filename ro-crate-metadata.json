@@ -21,31 +21,46 @@
         {
             "@id": "./",
             "@type": "Dataset",
-            "datePublished": "2023-06-20T10:34:18+00:00",
+            "datePublished": "2023-06-20T15:11:01+00:00",
             "hasPart": [
                 {
-                    "@id": "my-workflow-for-galaxy.ga"
+                    "@id": "workflow/Snakefile"
                 },
                 {
-                    "@id": "my-workflow-for-galaxy-test.yml"
+                    "@id": "workflow/"
                 },
                 {
-                    "@id": "test-data/"
+                    "@id": "config/"
+                },
+                {
+                    "@id": "workflow/rules/"
+                },
+                {
+                    "@id": "workflow/envs/"
+                },
+                {
+                    "@id": "workflow/scripts/"
+                },
+                {
+                    "@id": "workflow/notebooks/"
                 },
                 {
                     "@id": "README.md"
+                },
+                {
+                    "@id": "LICENSE"
                 }
             ],
             "isBasedOn": "https://github.com/kikkomep/myworkflow",
             "mainEntity": {
-                "@id": "my-workflow-for-galaxy.ga"
+                "@id": "workflow/Snakefile"
             },
             "mentions": [
                 {
-                    "@id": "#cc011c18-2e27-486a-8b42-b4f8439241b4"
+                    "@id": "#f229335e-9af3-41b0-82ca-eee4b2eecdd1"
                 }
             ],
-            "name": "MyWorkflowForGalaxy"
+            "name": "MyWorkflow"
         },
         {
             "@id": "ro-crate-metadata.json",
@@ -63,51 +78,48 @@
             ]
         },
         {
-            "@id": "my-workflow-for-galaxy.ga",
+            "@id": "workflow/Snakefile",
             "@type": [
                 "File",
                 "SoftwareSourceCode",
                 "ComputationalWorkflow"
             ],
-            "name": "MyWorkflowForGalaxy",
+            "name": "MyWorkflow",
             "programmingLanguage": {
-                "@id": "https://w3id.org/workflowhub/workflow-ro-crate#galaxy"
+                "@id": "https://w3id.org/workflowhub/workflow-ro-crate#snakemake"
             },
             "url": "https://github.com/kikkomep/myworkflow",
             "version": "main"
         },
         {
-            "@id": "https://w3id.org/workflowhub/workflow-ro-crate#galaxy",
+            "@id": "https://w3id.org/workflowhub/workflow-ro-crate#snakemake",
             "@type": "ComputerLanguage",
             "identifier": {
-                "@id": "https://galaxyproject.org/"
+                "@id": "https://doi.org/10.1093/bioinformatics/bts480"
             },
-            "name": "Galaxy",
+            "name": "Snakemake",
             "url": {
-                "@id": "https://galaxyproject.org/"
+                "@id": "https://snakemake.readthedocs.io"
             },
-            "version": "21.09"
+            "version": "6.5.0"
         },
         {
-            "@id": "#cc011c18-2e27-486a-8b42-b4f8439241b4",
+            "@id": "#f229335e-9af3-41b0-82ca-eee4b2eecdd1",
             "@type": "TestSuite",
-            "definition": {
-                "@id": "my-workflow-for-galaxy-test.yml"
-            },
             "instance": [
                 {
-                    "@id": "#e0175818-1c6e-4dde-8ff1-7fd70c1bc540"
+                    "@id": "#96123008-ce31-4b4e-b189-f7e6e0e256ee"
                 }
             ],
             "mainEntity": {
-                "@id": "my-workflow-for-galaxy.ga"
+                "@id": "workflow/Snakefile"
             },
-            "name": "Test suite for MyWorkflowForGalaxy"
+            "name": "Test suite for MyWorkflow"
         },
         {
-            "@id": "#e0175818-1c6e-4dde-8ff1-7fd70c1bc540",
+            "@id": "#96123008-ce31-4b4e-b189-f7e6e0e256ee",
             "@type": "TestInstance",
-            "name": "GitHub Actions workflow for testing MyWorkflowForGalaxy",
+            "name": "GitHub Actions workflow for testing MyWorkflow",
             "resource": "repos/kikkomep/myworkflow/actions/workflows/main.yml",
             "runsOn": {
                 "@id": "https://w3id.org/ro/terms/test#GithubService"
@@ -123,33 +135,42 @@
             }
         },
         {
-            "@id": "my-workflow-for-galaxy-test.yml",
-            "@type": [
-                "File",
-                "TestDefinition"
-            ],
-            "conformsTo": {
-                "@id": "https://w3id.org/ro/terms/test#PlanemoEngine"
-            },
-            "engineVersion": "0.74"
-        },
-        {
-            "@id": "https://w3id.org/ro/terms/test#PlanemoEngine",
-            "@type": "SoftwareApplication",
-            "name": "Planemo",
-            "url": {
-                "@id": "https://github.com/galaxyproject/planemo"
-            }
-        },
-        {
-            "@id": "test-data/",
+            "@id": "workflow/",
             "@type": "Dataset",
-            "description": "Data files for testing the workflow"
+            "description": "Workflow folder"
+        },
+        {
+            "@id": "config/",
+            "@type": "Dataset",
+            "description": "Configuration folder"
+        },
+        {
+            "@id": "workflow/rules/",
+            "@type": "Dataset",
+            "description": "Workflow rule modules"
+        },
+        {
+            "@id": "workflow/envs/",
+            "@type": "Dataset",
+            "description": "Conda environments"
+        },
+        {
+            "@id": "workflow/scripts/",
+            "@type": "Dataset",
+            "description": "Scripts folder"
+        },
+        {
+            "@id": "workflow/notebooks/",
+            "@type": "Dataset",
+            "description": "Notebooks folder"
         },
         {
             "@id": "README.md",
-            "@type": "File",
-            "description": "Workflow documentation"
+            "@type": "File"
+        },
+        {
+            "@id": "LICENSE",
+            "@type": "File"
         }
     ]
 }
