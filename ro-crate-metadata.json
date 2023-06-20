@@ -21,46 +21,79 @@
         {
             "@id": "./",
             "@type": "Dataset",
-            "datePublished": "2023-06-20T15:11:01+00:00",
+            "datePublished": "2023-06-20T15:25:10+00:00",
             "hasPart": [
                 {
-                    "@id": "workflow/Snakefile"
+                    "@id": "main.nf"
                 },
                 {
-                    "@id": "workflow/"
+                    "@id": "assets/"
                 },
                 {
-                    "@id": "config/"
+                    "@id": "bin/"
                 },
                 {
-                    "@id": "workflow/rules/"
+                    "@id": "conf/"
                 },
                 {
-                    "@id": "workflow/envs/"
+                    "@id": "docs/"
                 },
                 {
-                    "@id": "workflow/scripts/"
+                    "@id": "docs/images/"
                 },
                 {
-                    "@id": "workflow/notebooks/"
+                    "@id": "lib/"
+                },
+                {
+                    "@id": "modules/"
+                },
+                {
+                    "@id": "modules/local/"
+                },
+                {
+                    "@id": "modules/nf-core/"
+                },
+                {
+                    "@id": "workflows/"
+                },
+                {
+                    "@id": "subworkflows/"
+                },
+                {
+                    "@id": "nextflow.config"
                 },
                 {
                     "@id": "README.md"
                 },
                 {
+                    "@id": "nextflow_schema.json"
+                },
+                {
+                    "@id": "CHANGELOG.md"
+                },
+                {
                     "@id": "LICENSE"
+                },
+                {
+                    "@id": "CODE_OF_CONDUCT.md"
+                },
+                {
+                    "@id": "CITATIONS.md"
+                },
+                {
+                    "@id": "modules.json"
                 }
             ],
             "isBasedOn": "https://github.com/kikkomep/myworkflow",
             "mainEntity": {
-                "@id": "workflow/Snakefile"
+                "@id": "main.nf"
             },
             "mentions": [
                 {
-                    "@id": "#f229335e-9af3-41b0-82ca-eee4b2eecdd1"
+                    "@id": "#3591ed9b-914a-45e1-a2dc-e00e4a4d8745"
                 }
             ],
-            "name": "MyWorkflow"
+            "name": "MyWorkflowNext"
         },
         {
             "@id": "ro-crate-metadata.json",
@@ -78,49 +111,50 @@
             ]
         },
         {
-            "@id": "workflow/Snakefile",
+            "@id": "main.nf",
             "@type": [
                 "File",
                 "SoftwareSourceCode",
                 "ComputationalWorkflow"
             ],
-            "name": "MyWorkflow",
+            "description": "MyWorkflowDescription",
+            "name": "MyWorkflowNext",
             "programmingLanguage": {
-                "@id": "https://w3id.org/workflowhub/workflow-ro-crate#snakemake"
+                "@id": "https://w3id.org/workflowhub/workflow-ro-crate#nextflow"
             },
             "url": "https://github.com/kikkomep/myworkflow",
             "version": "main"
         },
         {
-            "@id": "https://w3id.org/workflowhub/workflow-ro-crate#snakemake",
+            "@id": "https://w3id.org/workflowhub/workflow-ro-crate#nextflow",
             "@type": "ComputerLanguage",
             "identifier": {
-                "@id": "https://doi.org/10.1093/bioinformatics/bts480"
+                "@id": "https://www.nextflow.io/"
             },
-            "name": "Snakemake",
+            "name": "Nextflow",
             "url": {
-                "@id": "https://snakemake.readthedocs.io"
+                "@id": "https://www.nextflow.io/"
             },
-            "version": "6.5.0"
+            "version": "!>=21.10.3"
         },
         {
-            "@id": "#f229335e-9af3-41b0-82ca-eee4b2eecdd1",
+            "@id": "#3591ed9b-914a-45e1-a2dc-e00e4a4d8745",
             "@type": "TestSuite",
             "instance": [
                 {
-                    "@id": "#96123008-ce31-4b4e-b189-f7e6e0e256ee"
+                    "@id": "#c9b67eb7-7328-47b6-8fb1-7cc42eecb000"
                 }
             ],
             "mainEntity": {
-                "@id": "workflow/Snakefile"
+                "@id": "main.nf"
             },
-            "name": "Test suite for MyWorkflow"
+            "name": "Test suite for MyWorkflowNext"
         },
         {
-            "@id": "#96123008-ce31-4b4e-b189-f7e6e0e256ee",
+            "@id": "#c9b67eb7-7328-47b6-8fb1-7cc42eecb000",
             "@type": "TestInstance",
-            "name": "GitHub Actions workflow for testing MyWorkflow",
-            "resource": "repos/kikkomep/myworkflow/actions/workflows/main.yml",
+            "name": "GitHub Actions workflow for testing MyWorkflowNext",
+            "resource": "repos/kikkomep/myworkflow/actions/workflows/ci.yml",
             "runsOn": {
                 "@id": "https://w3id.org/ro/terms/test#GithubService"
             },
@@ -135,42 +169,99 @@
             }
         },
         {
-            "@id": "workflow/",
+            "@id": "assets/",
             "@type": "Dataset",
-            "description": "Workflow folder"
+            "description": "Additional files"
         },
         {
-            "@id": "config/",
+            "@id": "bin/",
             "@type": "Dataset",
-            "description": "Configuration folder"
+            "description": "Scripts that must be callable from a pipeline process"
         },
         {
-            "@id": "workflow/rules/",
+            "@id": "conf/",
             "@type": "Dataset",
-            "description": "Workflow rule modules"
+            "description": "Configuration files"
         },
         {
-            "@id": "workflow/envs/",
+            "@id": "docs/",
             "@type": "Dataset",
-            "description": "Conda environments"
+            "description": "Markdown files for documenting the pipeline"
         },
         {
-            "@id": "workflow/scripts/",
+            "@id": "docs/images/",
             "@type": "Dataset",
-            "description": "Scripts folder"
+            "description": "Images for the documentation files"
         },
         {
-            "@id": "workflow/notebooks/",
+            "@id": "lib/",
             "@type": "Dataset",
-            "description": "Notebooks folder"
+            "description": "Groovy utility functions"
+        },
+        {
+            "@id": "modules/",
+            "@type": "Dataset",
+            "description": "Modules used by the pipeline"
+        },
+        {
+            "@id": "modules/local/",
+            "@type": "Dataset",
+            "description": "Pipeline-specific modules"
+        },
+        {
+            "@id": "modules/nf-core/",
+            "@type": "Dataset",
+            "description": "nf-core modules"
+        },
+        {
+            "@id": "workflows/",
+            "@type": "Dataset",
+            "description": "Main pipeline workflows to be executed in main.nf"
+        },
+        {
+            "@id": "subworkflows/",
+            "@type": "Dataset",
+            "description": "Smaller subworkflows"
+        },
+        {
+            "@id": "nextflow.config",
+            "@type": "File",
+            "description": "Main Nextflow configuration file"
         },
         {
             "@id": "README.md",
-            "@type": "File"
+            "@type": "File",
+            "description": "Basic pipeline usage information"
+        },
+        {
+            "@id": "nextflow_schema.json",
+            "@type": "File",
+            "description": "JSON schema for pipeline parameter specification"
+        },
+        {
+            "@id": "CHANGELOG.md",
+            "@type": "File",
+            "description": "Information on changes made to the pipeline"
         },
         {
             "@id": "LICENSE",
-            "@type": "File"
+            "@type": "File",
+            "description": "The license - should be MIT"
+        },
+        {
+            "@id": "CODE_OF_CONDUCT.md",
+            "@type": "File",
+            "description": "The nf-core code of conduct"
+        },
+        {
+            "@id": "CITATIONS.md",
+            "@type": "File",
+            "description": "Citations needed when using the pipeline"
+        },
+        {
+            "@id": "modules.json",
+            "@type": "File",
+            "description": "Version information for modules from nf-core/modules"
         }
     ]
 }
