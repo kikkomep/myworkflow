@@ -1,3 +1,3 @@
-# MyWorkflowForGalaxy
+# MyWorkflow
 
-Description
+test description
