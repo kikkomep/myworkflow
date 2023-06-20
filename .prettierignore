@@ -1,0 +1,12 @@
+email_template.html
+.nextflow*
+work/
+data/
+results/
+.DS_Store
+testing/
+testing*
+*.pyc
+ro-crate-metadata.json
+lifemonitor.yaml
+bin/check_samplesheet.py
