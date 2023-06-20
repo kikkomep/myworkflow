@@ -1,5 +1,5 @@
 # workflow name (override name defined on the RO-Crate metadata)
-name: MyWorkflowForGalaxy
+name: MyWorkflow
 
 # worklow visibility
 public: false
