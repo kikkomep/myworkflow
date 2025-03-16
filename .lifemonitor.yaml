@@ -2,7 +2,7 @@
 name: MyWorkflow
 
 # worklow visibility
-public: public
+public: True
 
 # Issue Checker Settings
 issues:
